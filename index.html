@@ -3,105 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advocate Prasanta</title>
+<title>Advocate Portfolio</title>
 
 <style>
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
-  background: #0f0f0f;
+}
+
+body {
+  background: #f4f6f9;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
+  background-size: cover;
   color: white;
-}
-
-/* HEADER */
-header {
-  background: black;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  border-bottom: 2px solid gold;
 }
 
-header h1 {
-  color: gold;
-  margin: 0;
+.hero h1 {
+  font-size: 50px;
 }
 
-/* CONTAINER */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
+.hero p {
+  margin: 15px 0;
+  font-size: 20px;
 }
 
-/* PROFILE */
-.profile {
-  text-align: center;
-  margin-top: 30px;
+.hero button {
+  padding: 12px 25px;
+  background: #0b3d91;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.profile img {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  border: 4px solid gold;
-  box-shadow: 0 0 25px gold;
-  object-fit: cover;
-}
-
-.profile h2 {
-  margin-top: 15px;
-  color: gold;
-}
-
-/* CARD */
-.card {
-  background: #1a1a1a;
-  margin: 25px 0;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid gold;
-  box-shadow: 0 0 10px rgba(255,215,0,0.3);
-}
-
-/* SERVICES GRID */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.service-box {
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  background: #0b3d91;
   padding: 15px;
-  border: 1px solid gold;
-  border-radius: 10px;
   text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTION */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  margin: 15px;
+  padding: 25px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: 0.3s;
 }
 
-.service-box:hover {
-  background: gold;
-  color: black;
-  transform: scale(1.05);
+.card:hover {
+  transform: translateY(-10px);
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 12px 18px;
-  background: gold;
-  color: black;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
+/* TESTIMONIAL */
+.testimonial {
+  background: #0b3d91;
+  color: white;
+  padding: 40px;
+  margin-top: 30px;
+}
+
+/* CONTACT */
+input, textarea {
+  width: 80%;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px 25px;
+  background: #0b3d91;
+  color: white;
+  border: none;
 }
 
 /* FOOTER */
 footer {
+  background: #222;
+  color: white;
+  padding: 20px;
   text-align: center;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
   padding: 15px;
-  background: black;
-  border-top: 1px solid gold;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
 }
 </style>
 
@@ -109,60 +141,76 @@ footer {
 
 <body>
 
-<header>
-  <h1>Advocate [Prasanta Jikadara]</h1>
-  <p>Expertin Legal Solutions </p>
-</header>
-
-<div class="container">
-
-  <!-- PROFILE -->
-  <div class="profile">
-    <img src="f9ee75b0-3592-49fa-9a4d-ce3f13387f6f.jpg" alt="Advocate Image">
-    <h2>Advocate [Prasanta jikadara]</h2>
-    <p> B.Com, LLB | Consulation</p>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Your Name - Prasanta Jikadara</h1>
+    <p>Professional Legal Services </p>
+    <button onclick="location.href='#contact'">Contact Now</button>
   </div>
-
-  <!-- ABOUT -->
-  <div class="card">
-    <h2>About</h2>
-    <p>
-      A dedicated and experienced advocate providing professional legal services in revenue
-       and family law. Known for strong case handling, client trust, and commitment to work.
-    </p>
-  </div>
-
-  <!-- SERVICES -->
-  <div class="card">
-    <h2>Services</h2>
-    <div class="services">
-      <div class="service-box">dastavej</div>
-      <div class="service-box">rent agreement</div>
-      <div class="service-box">mortage</div>
-      <div class="service-box">marriage certicate</div>
-      <div class="service-box">Legal Notice</div>
-      <div class="service-box">Consultation</div>
-       <div class="service-box">Homes loan</div>
-       <div class="service-box">satakat</div>
-    </div>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="card">
-    <h2>Contact</h2>
-    <p>📞 Phone: 8140532604</p>
-    <p>📧 Email: jikadaraprannta83217@gamil.com</p>
-
-    <a class="btn" href="https://wa.me/918140532604" target="_blank">
-      Chat on WhatsApp
-    </a>
-  </div>
-
 </div>
 
+<!-- NAV -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am an experienced advocate handling civil and property matters with professionalism and dedication.</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>My Services</h2>
+  <div class="services">
+    <div class="card">Dastavej</div>
+    <div class="card">Mortgage </div>
+    <div class="card">Property Matters</div>
+    <div class="card">Revenue Work</div>
+    <div class="card">Home loan</div>
+    <div class="card">Rent agreement </div>
+    <div class="card">GST Registration</div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial">
+  <h2>What Clients Say</h2>
+  <p>"Highly professional advocate, solved my property dispute quickly!"</p>
+</div>
+
+<!-- FEES -->
+<section>
+  <h2>Consultation Fees</h2>
+  <p>Case Review: As per work</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <input type="text" placeholder="Your Name"><br>
+  <input type="email" placeholder="Your Email"><br>
+  <textarea placeholder="Your Case Details"></textarea><br>
+  <button>Send</button>
+
+  <p>📞 918140532604</p>
+  <p>📍  Surat,Gujarat</p>
+
+  <iframe src="https://maps.app.goo.gl/xmbB77Q26MAtaAGE8"
+          width="80%" height="300"></iframe>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  © 2026 Advocate [Prasanta] | All Rights Reserved
+  <p>© 2026 Advocate | All Rights Reserved</p>
 </footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/918140532604">💬</a>
 
 </body>
 </html>
