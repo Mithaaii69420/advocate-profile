@@ -9,83 +9,99 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f5f5f5;
+  background: #0f0f0f;
+  color: white;
 }
 
 /* HEADER */
 header {
-  background: #000;
-  color: white;
-  text-align: center;
+  background: black;
   padding: 20px;
-  letter-spacing: 1px;
+  text-align: center;
+  border-bottom: 2px solid gold;
+}
+
+header h1 {
+  color: gold;
+  margin: 0;
 }
 
 /* CONTAINER */
 .container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-}
-
-/* CARD DESIGN */
-.card {
-  background: white;
-  margin: 20px 0;
-  padding: 20px;
-  border-radius: 12px;
-  border: 2px solid #000;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* PROFILE */
 .profile {
   text-align: center;
+  margin-top: 30px;
 }
 
 .profile img {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
-  border: 4px solid black;
+  border: 4px solid gold;
+  box-shadow: 0 0 25px gold;
   object-fit: cover;
 }
 
-h2 {
-  margin-top: 10px;
+.profile h2 {
+  margin-top: 15px;
+  color: gold;
 }
 
-/* SERVICES */
-.services ul {
-  list-style: none;
-  padding: 0;
+/* CARD */
+.card {
+  background: #1a1a1a;
+  margin: 25px 0;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid gold;
+  box-shadow: 0 0 10px rgba(255,215,0,0.3);
 }
 
-.services li {
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #000;
-  border-radius: 8px;
+/* SERVICES GRID */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
 }
 
-/* CONTACT */
-.contact a {
+.service-box {
+  padding: 15px;
+  border: 1px solid gold;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  background: gold;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* BUTTON */
+.btn {
   display: inline-block;
   margin-top: 10px;
-  padding: 10px 15px;
-  background: green;
-  color: white;
+  padding: 12px 18px;
+  background: gold;
+  color: black;
   text-decoration: none;
   border-radius: 8px;
+  font-weight: bold;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 15px;
-  background: #000;
-  color: white;
-  margin-top: 20px;
+  background: black;
+  border-top: 1px solid gold;
 }
 </style>
 
@@ -94,48 +110,50 @@ footer {
 <body>
 
 <header>
-  <h1>Advocate [Prasanta jikadara]</h1>
-  <p>Trusted Legal Services</p>
+  <h1>Advocate [Prasanta Jikadara]</h1>
+  <p>Expertin Legal Solutions </p>
 </header>
 
 <div class="container">
 
   <!-- PROFILE -->
-  <div class="card profile">
-   
+  <div class="profile">
+    <img src="image.jpg" alt="Advocate Image">
     <h2>Advocate [Prasanta jikadara]</h2>
-    <img src="image.jpg">
-    <p>LLB | High Court Practitioner</p>
+    <p> B.Com, LLB | Consulation</p>
   </div>
 
   <!-- ABOUT -->
   <div class="card">
     <h2>About</h2>
     <p>
-      Experienced advocate providing professional legal services with strong expertise in civil,
-       and family law. Dedicated to delivering justice with integrity and commitment.
+      A dedicated and experienced advocate providing professional legal services in revenue
+       and family law. Known for strong case handling, client trust, and commitment to work.
     </p>
   </div>
 
   <!-- SERVICES -->
-  <div class="card services">
+  <div class="card">
     <h2>Services</h2>
-    <ul>
-      
-      <li>Civil Litigation</li>
-      <li>Family Law</li>
-      <li>Property Disputes</li>
-      <li>Legal Consultation</li>
-    </ul>
+    <div class="services">
+      <div class="service-box">dastavej</div>
+      <div class="service-box">rent agreement</div>
+      <div class="service-box">mortage</div>
+      <div class="service-box">marriage certicate</div>
+      <div class="service-box">Legal Notice</div>
+      <div class="service-box">Consultation</div>
+       <div class="service-box">Homes loan</div>
+       <div class="service-box">satakat</div>
+    </div>
   </div>
 
   <!-- CONTACT -->
-  <div class="card contact">
+  <div class="card">
     <h2>Contact</h2>
     <p>📞 Phone: 8140532604</p>
-    <p>📧 Email: jikadaraprasannta83217.com</p>
+    <p>📧 Email: jikadaraprannta83217@gamil.com</p>
 
-    <a href="https://wa.me/918140532604" target="_blank">
+    <a class="btn" href="https://wa.me/918140532604" target="_blank">
       Chat on WhatsApp
     </a>
   </div>
@@ -143,7 +161,7 @@ footer {
 </div>
 
 <footer>
-  © 2026 Advocate [Prasanta jikadara] | All Rights Reserved
+  © 2026 Advocate [Prasanta] | All Rights Reserved
 </footer>
 
 </body>
