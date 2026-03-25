@@ -3,214 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advocate Portfolio</title>
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-  background: #f4f6f9;
-}
-
-/* HERO SECTION */
-.hero {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('f9ee75b0-3592-49fa-9a4d-ce3f13387f6f.jpg');
-  
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 50px;
-}
-
-.hero p {
-  margin: 15px 0;
-  font-size: 20px;
-}
-
-.hero button {
-  padding: 12px 25px;
-  background: #0b3d91;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-/* NAVBAR */
-nav {
-  position: sticky;
-  top: 0;
-  background: #0b3d91;
-  padding: 15px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* SECTION */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-/* SERVICES */
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  background: white;
-  margin: 15px;
-  padding: 25px;
-  width: 250px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-/* TESTIMONIAL */
-.testimonial {
-  background: #0b3d91;
-  color: white;
-  padding: 40px;
-  margin-top: 30px;
-}
-
-/* CONTACT */
-input, textarea {
-  width: 80%;
-  padding: 12px;
-  margin: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  padding: 12px 25px;
-  background: #0b3d91;
-  color: white;
-  border: none;
-}
-
-/* FOOTER */
-footer {
-  background: #222;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 22px;
-  text-decoration: none;
-}
-</style>
-
+<title>Adv. Prasanta Jikadara | Legal Services</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-gray-100">
 
-<!-- HERO -->
-<div class="hero">
+<!-- NAVBAR -->
+<nav class="bg-black text-white p-4 flex justify-between items-center">
+  <h1 class="text-xl font-bold">Adv. Prasanta jikadara</h1>
   <div>
-    <h1> - Prasanta Jikadara</h1>
-    <p>Professional Legal Services </p>
-    <button onclick="location.href='#contact'">Contact Now</button>
+    <a href="#services" class="mr-4">Services</a>
+    <a href="#contact">Contact</a>
   </div>
-</div>
-
-<!-- NAV -->
-<nav>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
 </nav>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>I am an experienced advocate handling civil and property matters with professionalism and dedication.</p>
+<!-- HERO SECTION -->
+<section class="flex flex-col md:flex-row items-center justify-between py-16 bg-gradient-to-r from-black to-gray-800 text-white px-6">
+
+  <div class="md:w-1/2">
+    <h2 class="text-3xl font-bold mb-4"> Legal Services</h2>
+    <p class="mb-6">Helping clients with indian legal matters</p>
+    <a href="#contact" class="bg-white text-black px-6 py-2 rounded">Get Consultation</a>
+  </div>
+
+  <div class="md:w-1/2 mt-6 md:mt-0">
+    <!-- CHANGE IMAGE NAME HERE -->
+    <img src="roshan.jpg" alt="Advocate Image" class="rounded-lg shadow-lg w-full">
+  </div>
+
 </section>
 
 <!-- SERVICES -->
-<section id="services">
-  <h2>My Services</h2>
-  <div class="services">
-    <div class="card">Dastavej</div>
-    <div class="card">Mortgage </div>
-    <div class="card">Property Matters</div>
-    <div class="card">Revenue Work</div>
-    <div class="card">Home loan</div>
-    <div class="card">Rent agreement </div>
-    <div class="card">GST Registration</div>
+<section id="services" class="p-6">
+  <h2 class="text-2xl font-bold text-center mb-6">Our Services</h2>
+
+  <div class="grid md:grid-cols-3 gap-4">
+
+    <div class="bg-white p-4 shadow rounded">
+      <h3 class="font-bold text-lg">NRI Property Cases</h3>
+      <p>Property disputes & documentation</p>
+    </div>
+
+    <div class="bg-white p-4 shadow rounded">
+      <h3 class="font-bold text-lg">Divorce & Family Law</h3>
+      <p>International family legal matters</p>
+    </div>
+
+    <div class="bg-white p-4 shadow rounded">
+      <h3 class="font-bold text-lg">Revenue Cases</h3>
+      <p>Land & government legal issues</p>
+    </div>
+
   </div>
 </section>
 
-<!-- TESTIMONIAL -->
-<div class="testimonial">
-  <h2>What Clients Say</h2>
-  <p>"Highly professional advocate, solved my property dispute quickly!"</p>
-</div>
-
-<!-- FEES -->
-<section>
-  <h2>Consultation Fees</h2>
-  <p>Case Review: As per work</p>
+<!-- WHY CHOOSE US -->
+<section class="bg-gray-200 p-6 text-center">
+  <h2 class="text-xl font-bold mb-4">Why Choose Us?</h2>
+  <p>✔ Experienced Advocate</p>
+  <p>✔ International Client Handling</p>
+  <p>✔ Fast & Confidential Service</p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <h2>Contact Me</h2>
-  <input type="text" placeholder="Your Name"><br>
-  <input type="email" placeholder="Your Email"><br>
-  <textarea placeholder="Your Case Details"></textarea><br>
-  <button>Send</button>
+<section id="contact" class="p-6">
+  <h2 class="text-2xl font-bold text-center mb-4">Contact Us</h2>
 
-  <p>📞 918140532604</p>
-  <p>📍  Surat,Gujarat</p>
+  <!-- FORM (WORKING WITH FORMSPREE) -->
+  <form action="https://formspree.io/f/yourID" method="POST" class="max-w-md mx-auto bg-white p-4 shadow rounded">
 
-  <iframe src="https://maps.app.goo.gl/xmbB77Q26MAtaAGE8"
-          width="80%" height="300"></iframe>
+    <input type="text" name="name" placeholder="Your Name" class="w-full mb-3 p-2 border" required>
+
+    <input type="email" name="email" placeholder="Email" class="w-full mb-3 p-2 border" required>
+
+    <input type="tel" name="phone" placeholder="Phone" class="w-full mb-3 p-2 border">
+
+    <select name="case" class="w-full mb-3 p-2 border">
+      <option>Select Case Type</option>
+      <option>Property</option>
+      <option>Divorce</option>
+      <option>Revenue</option>
+    </select>
+
+    <textarea name="message" placeholder="Your Case Details" class="w-full mb-3 p-2 border"></textarea>
+
+    <button class="bg-black text-white w-full py-2 rounded">Submit Inquiry</button>
+  </form>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Advocate | All Rights Reserved</p>
-</footer>
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/919876543210"
+   class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg">
+   WhatsApp
+</a>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/918140532604">💬</a>
+<!-- FOOTER -->
+<footer class="bg-black text-white text-center p-4 mt-6">
+  <p>© 2026 Adv. Roshan Badela | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
